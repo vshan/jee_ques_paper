@@ -1,0 +1,33 @@
+<%= form_for(@topiccode) do |f| %>
+  <% if @topiccode.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@topiccode.errors.count, "error") %> prohibited this topiccode from being saved:</h2>
+
+      <ul>
+      <% @topiccode.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tcode %><br>
+    <%= f.number_field :tcode %>
+  </div>
+  <div class="field">
+    <%= f.label :tname %><br>
+    <%= f.text_field :tname %>
+  </div>
+  <div class="field">
+    <%= f.label :scode %><br>
+    <%= f.number_field :scode %>
+  </div>
+  <div class="field">
+    <%= f.label :active %><br>
+    <%= f.text_field :active %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

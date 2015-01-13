@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Stcode:</strong>
+  <%= @subtopiccode.stcode %>
+</p>
+
+<p>
+  <strong>Stname:</strong>
+  <%= @subtopiccode.stname %>
+</p>
+
+<p>
+  <strong>Tcode:</strong>
+  <%= @subtopiccode.tcode %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @subtopiccode.active %>
+</p>
+
+<%= link_to 'Edit', edit_subtopiccode_path(@subtopiccode) %> |
+<%= link_to 'Back', subtopiccodes_path %>

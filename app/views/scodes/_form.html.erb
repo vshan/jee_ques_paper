@@ -1,0 +1,25 @@
+<%= form_for(@scode) do |f| %>
+  <% if @scode.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@scode.errors.count, "error") %> prohibited this scode from being saved:</h2>
+
+      <ul>
+      <% @scode.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :scode %><br>
+    <%= f.text_field :scode %>
+  </div>
+  <div class="field">
+    <%= f.label :sname %><br>
+    <%= f.text_field :sname %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

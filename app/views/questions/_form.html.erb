@@ -1,0 +1,61 @@
+<%= form_for(@question) do |f| %>
+  <% if @question.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@question.errors.count, "error") %> prohibited this question from being saved:</h2>
+
+      <ul>
+      <% @question.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :question %><br>
+    <%= f.text_area :question %>
+  </div>
+  <div class="field">
+    <%= f.label :opa %><br>
+    <%= f.text_area :opa %>
+  </div>
+  <div class="field">
+    <%= f.label :opb %><br>
+    <%= f.text_area :opb %>
+  </div>
+  <div class="field">
+    <%= f.label :opc %><br>
+    <%= f.text_area :opc %>
+  </div>
+  <div class="field">
+    <%= f.label :opd %><br>
+    <%= f.text_area :opd %>
+  </div>
+  <div class="field">
+    <%= f.label :ro %><br>
+    <%= f.text_field :ro %>
+  </div>
+  <div class="field">
+    <%= f.label :year %><br>
+    <%= f.date_select :year %>
+  </div>
+  <div class="field">
+    <%= f.label :examcode %><br>
+    <%= f.number_field :examcode %>
+  </div>
+  <div class="field">
+    <%= f.label :subjectcode %><br>
+    <%= f.number_field :subjectcode %>
+  </div>
+  <div class="field">
+    <%= f.label :topiccode %><br>
+    <%= f.number_field :topiccode %>
+  </div>
+  <div class="field">
+    <%= f.label :stopiccode %><br>
+    <%= f.number_field :stopiccode %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

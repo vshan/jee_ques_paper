@@ -1,0 +1,48 @@
+<h1>Listing questions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Opa</th>
+      <th>Opb</th>
+      <th>Opc</th>
+      <th>Opd</th>
+      <th>Ro</th>
+      <th>Year</th>
+      <th>Examcode</th>
+      <th>Subjectcode</th>
+      <th>Topiccode</th>
+      <th>Stopiccode</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @questions.each do |question| %>
+      <tr>
+        <td><%= question.question.html_safe %></td>
+        <td><%= question.opa %></td>
+        <td><%= question.opb %></td>
+        <td><%= question.opc %></td>
+        <td><%= question.opd %></td>
+        <td><%= question.ro %></td>
+        <td><%= question.year %></td>
+        <td><%= question.examcode %></td>
+        <td><%= question.subjectcode %></td>
+        <td><%= question.topiccode %></td>
+        <td><%= question.stopiccode %></td>
+        <td><%= link_to 'Show', question %></td>
+        <td><%= link_to 'Edit', edit_question_path(question) %></td>
+        <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Question', new_question_path %>
+<%= link_to 'Random Question Generator', random_index_path %>

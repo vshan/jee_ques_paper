@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  stcode: 1
+  stname: MyString
+  tcode: 1
+  active: MyString
+
+two:
+  stcode: 1
+  stname: MyString
+  tcode: 1
+  active: MyString

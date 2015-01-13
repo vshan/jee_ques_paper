@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tcode:</strong>
+  <%= @topiccode.tcode %>
+</p>
+
+<p>
+  <strong>Tname:</strong>
+  <%= @topiccode.tname %>
+</p>
+
+<p>
+  <strong>Scode:</strong>
+  <%= @topiccode.scode %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @topiccode.active %>
+</p>
+
+<%= link_to 'Edit', edit_topiccode_path(@topiccode) %> |
+<%= link_to 'Back', topiccodes_path %>

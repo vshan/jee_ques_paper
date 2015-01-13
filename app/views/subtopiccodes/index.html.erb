@@ -1,0 +1,33 @@
+<h1>Listing subtopiccodes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Stcode</th>
+      <th>Stname</th>
+      <th>Tcode</th>
+      <th>Active</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @subtopiccodes.each do |subtopiccode| %>
+      <tr>
+        <td><%= subtopiccode.stcode %></td>
+        <td><%= subtopiccode.stname %></td>
+        <td><%= subtopiccode.tcode %></td>
+        <td><%= subtopiccode.active %></td>
+        <td><%= link_to 'Show', subtopiccode %></td>
+        <td><%= link_to 'Edit', edit_subtopiccode_path(subtopiccode) %></td>
+        <td><%= link_to 'Destroy', subtopiccode, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Subtopiccode', new_subtopiccode_path %>

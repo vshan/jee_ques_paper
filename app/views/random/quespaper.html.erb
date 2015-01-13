@@ -1,0 +1,16 @@
+<h1>Question Paper</h1>
+<h2>Physics</h2>
+<% @phyq.each do |question| %> 
+<p><%= question.question %></p>
+<% end %>
+<h2>Chemistry</h2>
+<% @chemq.each do |question| %> 
+<p><%= question.question %></p>
+<% end %>
+<h2>Maths</h2>
+<% @matq.each do |question| %> 
+<p><%= question.question %></p>
+<% end %>
+<p> Go back to
+  <%= link_to "home", random_index_path %>
+</p>

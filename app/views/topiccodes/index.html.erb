@@ -1,0 +1,33 @@
+<h1>Listing topiccodes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tcode</th>
+      <th>Tname</th>
+      <th>Scode</th>
+      <th>Active</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @topiccodes.each do |topiccode| %>
+      <tr>
+        <td><%= topiccode.tcode %></td>
+        <td><%= topiccode.tname %></td>
+        <td><%= topiccode.scode %></td>
+        <td><%= topiccode.active %></td>
+        <td><%= link_to 'Show', topiccode %></td>
+        <td><%= link_to 'Edit', edit_topiccode_path(topiccode) %></td>
+        <td><%= link_to 'Destroy', topiccode, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Topiccode', new_topiccode_path %>

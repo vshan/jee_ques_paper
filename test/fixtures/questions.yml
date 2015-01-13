@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  question: MyText
+  opa: MyText
+  opb: MyText
+  opc: MyText
+  opd: MyText
+  ro: MyString
+  year: 2015-01-11
+  examcode: 1
+  subjectcode: 1
+  topiccode: 1
+  stopiccode: 1
+
+two:
+  question: MyText
+  opa: MyText
+  opb: MyText
+  opc: MyText
+  opd: MyText
+  ro: MyString
+  year: 2015-01-11
+  examcode: 1
+  subjectcode: 1
+  topiccode: 1
+  stopiccode: 1
