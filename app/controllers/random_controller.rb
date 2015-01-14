@@ -55,9 +55,14 @@ class RandomController < ApplicationController
   end
 
   def quespaper
-    @phyq = generate_question(1)
-    @chemq = generate_question(2)
-    @matq = generate_question(3)
+    #@phyq = generate_question(1)
+    #@chemq = generate_question(2)
+    #@matq = generate_question(3)
+    @sub = []
+    @scodes = Scode.all
+    @scodes.each do |s|
+      @sub[s.scode]=(generate_question(s.scode))
+    end
   end
   
   def create 
@@ -77,7 +82,7 @@ class RandomController < ApplicationController
   end
 
   def oneques(params)
-    scode = params[:question][:subject]
+   scode = params[:question][:subject]
     @rand = random(scode)
   end
 
