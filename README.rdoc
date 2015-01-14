@@ -13,24 +13,24 @@ Requirements:
 * Lot of bug fixes need to be done.
 
 DONE:
-+ Added Single and Multiple Random questions
-+ Added randomization
-+ Added option selection (form selects)
-+ Added question filtering for single questions
-+ Added scaffolding for Questions
-+ Added scaffolding for Scodes
-+ Added scaffolding for Topiccodes
-+ Added scaffolding for Subtopiccodes
-+ Added HTTP POST method for generation of questions
-+ Added effective seeding for databases
-+ Added (non-scaffolded) random controller
-+ Added (non-scaffolded) random views
-+ Added basic validation
+* Added Single and Multiple Random questions
+* Added randomization
+* Added option selection (form selects)
+* Added question filtering for single questions
+* Added scaffolding for Questions
+* Added scaffolding for Scodes
+* Added scaffolding for Topiccodes
+* Added scaffolding for Subtopiccodes
+* Added HTTP POST method for generation of questions
+* Added effective seeding for databases
+* Added (non-scaffolded) random controller
+* Added (non-scaffolded) random views
+* Added basic validation
+* Added answer selection (radio boxes) + answer validation
+
 
 TODO: 
-* Add advanced validation
 * Add AJAX Dynamic selection (cascading drop down)
-* Add answer selection (radio boxes) + answer validation
 * Add CSS
 * Add admin privileges
 
