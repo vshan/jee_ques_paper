@@ -6,9 +6,31 @@ Requirements:
 
 * Ruby version : 2.0.0
 
-* Currently (14/01/2015) generates only random question and question paper. Does show right answer and or add the marks to the result.
+* Currently (14/01/2015) generates only random question and question paper. Does not show right answer and or add the marks to the result.
 
 * Preliminary testing have not yet been done.
 
 * Lot of bug fixes need to be done.
 
+DONE:
++ Added Single and Multiple Random questions
++ Added randomization
++ Added option selection (form selects)
++ Added question filtering for single questions
++ Added scaffolding for Questions
++ Added scaffolding for Scodes
++ Added scaffolding for Topiccodes
++ Added scaffolding for Subtopiccodes
++ Added HTTP POST method for generation of questions
++ Added effective seeding for databases
++ Added (non-scaffolded) random controller
++ Added (non-scaffolded) random views
+
+TODO: 
+* Add Validation
+* Add AJAX Dynamic selection (cascading drop down)
+* Add answer selection (radio boxes) + answer validation
+* Add CSS
+* Add admin privileges
+
+-- SHIP 1st Iteration (1.0.0)
