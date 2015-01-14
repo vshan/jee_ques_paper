@@ -1,28 +1,14 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a random question and question paper generator.
 
-Things you may want to cover:
+Requirements:
 
-* Ruby version
+* Ruby version : 2.0.0
 
-* System dependencies
+* Currently (14/01/2015) generates only random question and question paper. Does show right answer and or add the marks to the result.
 
-* Configuration
+* Preliminary testing have not yet been done.
 
-* Database creation
+* Lot of bug fixes need to be done.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
