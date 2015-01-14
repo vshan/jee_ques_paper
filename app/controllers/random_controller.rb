@@ -16,7 +16,12 @@ class RandomController < ApplicationController
      @tcodes = Topiccode.all
      @tcode=[]
      @tcodes.each do |t|
-     @tcode.push([t.tname, t.scode])
+     @tcode.push([t.tname, t.tcode])
+    end
+     @stcodes = Subtopiccode.all
+     @stcode=[]
+     @stcodes.each do |st|
+     @stcode.push([st.stname, st.stcode])
     end
   end
 #  def delemelater
