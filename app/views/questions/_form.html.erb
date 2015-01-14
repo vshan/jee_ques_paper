@@ -13,27 +13,27 @@
 
   <div class="field">
     <%= f.label :question %><br>
-    <%= f.text_area :question %>
+    <%= f.text_area :question ,:class => 'ckeditor' %>
   </div>
   <div class="field">
     <%= f.label :opa %><br>
-    <%= f.text_area :opa %>
+    <%= f.text_area :opa , :class => 'ckeditor'%>
   </div>
   <div class="field">
     <%= f.label :opb %><br>
-    <%= f.text_area :opb %>
+    <%= f.text_area :opb, :class => 'ckeditor' %>
   </div>
   <div class="field">
     <%= f.label :opc %><br>
-    <%= f.text_area :opc %>
+    <%= f.text_area :opc, :class => 'ckeditor' %>
   </div>
   <div class="field">
     <%= f.label :opd %><br>
-    <%= f.text_area :opd %>
+    <%= f.text_area :opd, :class => 'ckeditor' %>
   </div>
   <div class="field">
     <%= f.label :ro %><br>
-    <%= f.text_field :ro %>
+    <%= f.select :ro, {A: 'A', B:'B', C: 'C' , D: 'D'}%>
   </div>
   <div class="field">
     <%= f.label :year %><br>

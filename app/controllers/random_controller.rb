@@ -8,7 +8,6 @@ class RandomController < ApplicationController
 
   def index
     enable
-
     @scodes = Scode.all
     @scode=[]
     @scodes.each do |s|

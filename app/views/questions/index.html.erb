@@ -1,3 +1,12 @@
+<head>
+<style>
+.correct
+{ background:black;
+  color:white;
+}
+</style>
+</head>
+<body>
 <h1>Listing questions</h1>
 
 <table>
@@ -24,10 +33,10 @@
     <% @questions.each do |question| %>
       <tr>
         <td><%= question.question.html_safe %></td>
-        <td><%= question.opa %></td>
-        <td><%= question.opb %></td>
-        <td><%= question.opc %></td>
-        <td><%= question.opd %></td>
+        <td <%= question.ro.capitalize =='A' ? 'class=correct' : '' %> ><%= question.opa.html_safe %></td>
+        <td <%= question.ro.capitalize =='B' ? 'class=correct' : '' %> ><%= question.opb.html_safe %></td>
+        <td <%= question.ro.capitalize =='C' ? 'class=correct' : '' %> ><%= question.opc.html_safe %></td>
+        <td <%= question.ro.capitalize =='D' ? 'class=correct' : '' %> ><%= question.opd.html_safe %></td>
         <td><%= question.ro %></td>
         <td><%= question.year %></td>
         <td><%= question.examcode %></td>
@@ -43,6 +52,8 @@
 </table>
 
 <br>
-
+<div data-no-turbolink>
 <%= link_to 'New Question', new_question_path %>
 <%= link_to 'Random Question Generator', random_index_path %>
+</div>
+</body>
