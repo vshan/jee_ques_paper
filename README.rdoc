@@ -28,7 +28,6 @@ DONE:
 * Added basic validation
 * Added answer selection (radio boxes) + answer validation
 
-
 TODO: 
 * Add AJAX Dynamic selection (cascading drop down)
 * Add CSS

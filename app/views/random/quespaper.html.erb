@@ -1,25 +1,29 @@
 <h1>Question Paper</h1>
+<%= form_for(:question) do |f| %>
 <% @scodes.each do |s| %>
+<% unless s.scode == 0  #to prevent All from showing up %>
 <h2> <%= s.sname %> </h2>
 <% @sub[s.scode].each do |question| %> 
 <p><%= question.question.html_safe %></p>
+ 
 <p> 
-<%= form_for(:question) do |f| %>
 <%= f.label "Option: " %>
-<%= f.radio_button :option, 'A' %>
-<%= f.label :a %>
-<%= f.radio_button :option, 'B' %>
-<%= f.label :b %>
-<%= f.radio_button :option, 'C' %>
-<%= f.label :c %>
-<%= f.radio_button :option, 'D' %>
-<%= f.label :d %>
+<%= f.radio_button :option, question.opa %>
+<%= f.label "#{question.opa}" %>
+<%= f.radio_button :option, question.opb %>
+<%= f.label "#{question.opb}" %>
+<%= f.radio_button :option, question.opc %>
+<%= f.label "#{question.opc}" %>
+<%= f.radio_button :option, question.opd %>
+<%= f.label "#{question.opd}" %>
 </p>
+
+<% end %>
+<% end %>
+<% end %>
 <p class = "actions">
-<%= f.submit 'Go!' %> 
+<%= f.submit 'Submit Paper' %> 
 </p>
-<% end %>
-<% end %>
 <% end %>
 <p> Go back to
   <%= link_to "home", random_index_path %>

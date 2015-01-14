@@ -4,14 +4,14 @@
 
 <p> 
 <%= f.label "Option: " %>
-<%= f.radio_button :option, 'A' %>
-<%= f.label :a %>
-<%= f.radio_button :option, 'B' %>
-<%= f.label :b %>
-<%= f.radio_button :option, 'C' %>
-<%= f.label :c %>
-<%= f.radio_button :option, 'D' %>
-<%= f.label :d %>
+<%= f.radio_button :option, @rand.opa %>
+<%= f.label "#{@rand.opa}" %>
+<%= f.radio_button :option, @rand.opb %>
+<%= f.label "#{@rand.opb}" %>
+<%= f.radio_button :option, @rand.opc %>
+<%= f.label "#{@rand.opc}" %>
+<%= f.radio_button :option, @rand.opd %>
+<%= f.label "#{@rand.opd}" %>
 </p>
 <p class = "actions">
 <%= f.submit 'Go!' %> 
