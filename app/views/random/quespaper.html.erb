@@ -1,5 +1,6 @@
 <h1>Question Paper</h1>
 <%= form_for(:question) do |f| %>
+
 <% @scodes.each do |s| %>
 <% unless s.scode == 0  #to prevent All from showing up %>
 <h2> <%= s.sname %> </h2>
@@ -8,13 +9,13 @@
  
 <p> 
 <%= f.label "Option: " %>
-<%= f.radio_button :option, question.opa %>
+<%= f.radio_button :option, "A" %>
 <%= f.label "#{question.opa}" %>
-<%= f.radio_button :option, question.opb %>
+<%= f.radio_button :option, "B" %>
 <%= f.label "#{question.opb}" %>
-<%= f.radio_button :option, question.opc %>
+<%= f.radio_button :option, "C" %>
 <%= f.label "#{question.opc}" %>
-<%= f.radio_button :option, question.opd %>
+<%= f.radio_button :option, "D" %>
 <%= f.label "#{question.opd}" %>
 </p>
 

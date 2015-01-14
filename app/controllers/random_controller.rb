@@ -2,7 +2,7 @@ require 'securerandom'
 
 class RandomController < ApplicationController
   def enable
-    @no_of_questions = 3
+    @no_of_questions = 2
     @questions = Question.all
   end
 
@@ -11,17 +11,17 @@ class RandomController < ApplicationController
     @scodes = Scode.all
     @scode=[]
     @scodes.each do |s|
-      @scode.push([s.sname, s.scode])
+       @scode.push([s.sname, s.scode])
     end
      @tcodes = Topiccode.all
      @tcode=[]
      @tcodes.each do |t|
-     @tcode.push([t.tname, t.tcode])
+       @tcode.push([t.tname, t.tcode])
     end
      @stcodes = Subtopiccode.all
      @stcode=[]
      @stcodes.each do |st|
-     @stcode.push([st.stname, st.stcode])
+       @stcode.push([st.stname, st.stcode])
     end
   end
 #  def delemelater
@@ -58,6 +58,15 @@ class RandomController < ApplicationController
     rques
   end
 
+  def oqvalidate(params)
+    index
+    if eval(params[:ques])[:value] == params[:question][:option]
+      @op = true
+    else
+      @op = false
+    end
+  end
+
   def quespaper
     #@phyq = generate_question(1)
     #@chemq = generate_question(2)
@@ -65,7 +74,9 @@ class RandomController < ApplicationController
     @sub = []
     @scodes = Scode.all
     @scodes.each do |s|
-      @sub[s.scode]=(generate_question(s.scode))
+      unless s.scode == 0
+        @sub[s.scode]=(generate_question(s.scode))
+      end
     end
   end
   
@@ -80,6 +91,11 @@ class RandomController < ApplicationController
         format.html do
           oneques(params)
           render action: 'oneques'
+        end
+      elsif params[:commit] == "Go!"
+        format.html do 
+          oqvalidate(params)
+          render action: 'oqvalidate'
         end
       end
     end
@@ -108,7 +124,7 @@ class RandomController < ApplicationController
       elsif (aqcode == question_code) && (atcode == topic_code) && (subtopic_code == 0)
         subq << question
       else
-        subq << Question.new(question: "No question found with specified conditions", opa: 1, opb: 1, opc: 1, opd: 1, ro: 'A', year: Date.parse("12-12-2014"), examcode: 1, subjectcode: 1, topiccode: 1, stopiccode: 1)
+        subq << Question.new(question: "No question found with specified conditions", opa: 1, opb: 1, opc: 1, opd: 1, ro: 'A', year: Date.parse("12-12-2014"), examcode: 1, subjectcode: 0, topiccode: 0, stopiccode: 0)
       end
     end
     subq.each do |s| puts(subq) 

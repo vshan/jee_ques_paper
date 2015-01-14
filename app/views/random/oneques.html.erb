@@ -1,20 +1,20 @@
 <h1>Single random question</h1>
 <p> <%= @rand.question.html_safe %>  </p>
 <%= form_for(:question) do |f| %>
-
+<%= hidden_field_tag :ques, :value => @rand.ro %>
 <p> 
 <%= f.label "Option: " %>
-<%= f.radio_button :option, @rand.opa %>
+<%= f.radio_button :option, "A" %>
 <%= f.label "#{@rand.opa}" %>
-<%= f.radio_button :option, @rand.opb %>
+<%= f.radio_button :option, "B" %>
 <%= f.label "#{@rand.opb}" %>
-<%= f.radio_button :option, @rand.opc %>
+<%= f.radio_button :option, "C" %>
 <%= f.label "#{@rand.opc}" %>
-<%= f.radio_button :option, @rand.opd %>
+<%= f.radio_button :option, "D" %>
 <%= f.label "#{@rand.opd}" %>
 </p>
 <p class = "actions">
-<%= f.submit 'Go!' %> 
+<%= f.submit "Go!" %> 
 </p>
 <% end %>
 <p> Go back to
