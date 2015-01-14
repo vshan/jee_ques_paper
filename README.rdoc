@@ -25,9 +25,10 @@ DONE:
 + Added effective seeding for databases
 + Added (non-scaffolded) random controller
 + Added (non-scaffolded) random views
++ Added basic validation
 
 TODO: 
-* Add Validation
+* Add advanced validation
 * Add AJAX Dynamic selection (cascading drop down)
 * Add answer selection (radio boxes) + answer validation
 * Add CSS
