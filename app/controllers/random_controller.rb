@@ -86,16 +86,24 @@ class RandomController < ApplicationController
   end
 
   def oneques(params)
-   scode = params[:question][:subject]
-    @rand = random(scode)
+   ques_codes = params[:question]
+    @rand = random(ques_codes)
   end
 
-  def random(scode)
+  def random(ques_codes)
     subq = []
+    question_code = ques_codes[:subject].to_i
+    topic_code = ques_codes[:topic].to_i
+    subtopic_code = ques_codes[:stopic].to_i
     enable.each do |question|
-      if question.subjectcode == scode.to_i
+      aqcode = question.subjectcode
+      atcode = question.topiccode
+      astcode = question.stopiccode 
+      if (aqcode == question_code) && (atcode == topic_code) && (astcode == subtopic_code)
         subq << question
-      end 
+      else
+        subq << Question.new(question: "No question found with specified conditions", opa: 1, opb: 1, opc: 1, opd: 1, ro: 'A', year: Date.parse("12-12-2014"), examcode: 1, subjectcode: 1, topiccode: 1, stopiccode: 1)
+      end
     end
     subq[SecureRandom.random_number(subq.size)]
   end

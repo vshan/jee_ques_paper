@@ -2,11 +2,11 @@
 <div id="SingleQuestion">
 <h1>Single Question</h1>
 <%= form_for :question do |form| %> 
-<%= form.label :subject %>
+<%= form.label "Subject: " %>
 <%= form.select :subject, @scode %>
-<%= form.label :topic %>
+<%= form.label "Topic: " %>
 <%= form.select :topic, @tcode %>
-<%= form.label :stopic %>
+<%= form.label "Sub Topic: " %>
 <%= form.select :stopic, @stcode %>
  <p class="actions">
     <%= form.submit 'Generate Single Question'%>
