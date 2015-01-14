@@ -19,12 +19,14 @@ Question.create!([
 ])
 Scode.delete_all
 Scode.create!([
+  {scode: 0, sname: "All"},
   {scode: 1, sname: "Physics"},
   {scode: 2, sname: "Chemistry"},
   {scode: 3, sname: "Maths"}
 ])
 Subtopiccode.delete_all
 Subtopiccode.create!([
+  {stcode: 0, stname: "All subtopics", tcode: 0, active: "Y"},
   {stcode: 1, stname: "Supto1", tcode: 1, active: "Y"},
   {stcode: 2, stname: "Supto2", tcode: 1, active: "Y"},
   {stcode: 3, stname: "Supto3", tcode: 2, active: "Y"},
@@ -32,6 +34,7 @@ Subtopiccode.create!([
 ])
 Topiccode.delete_all
 Topiccode.create!([
+  {tcode: 0, tname: "All topics", scode: 0, active: "Y"},
   {tcode: 1, tname: "Dynamics", scode: 1, active: "Y"},
   {tcode: 2, tname: "Mechanics", scode: 1, active: "Y"},
   {tcode: 3, tname: "Electrostatics", scode: 1, active: "Y"},

@@ -1,5 +1,22 @@
 <h1>Single random question</h1>
 <p> <%= @rand.question.html_safe %>  </p>
+<%= form_for(:question) do |f| %>
+
+<p> 
+<%= f.label "Option: " %>
+<%= f.radio_button :option, 'A' %>
+<%= f.label :a %>
+<%= f.radio_button :option, 'B' %>
+<%= f.label :b %>
+<%= f.radio_button :option, 'C' %>
+<%= f.label :c %>
+<%= f.radio_button :option, 'D' %>
+<%= f.label :d %>
+</p>
+<p class = "actions">
+<%= f.submit 'Go!' %> 
+</p>
+<% end %>
 <p> Go back to
   <%= link_to "home", random_index_path %>
 </p>

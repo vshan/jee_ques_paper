@@ -3,6 +3,22 @@
 <h2> <%= s.sname %> </h2>
 <% @sub[s.scode].each do |question| %> 
 <p><%= question.question.html_safe %></p>
+<p> 
+<%= form_for(:question) do |f| %>
+<%= f.label "Option: " %>
+<%= f.radio_button :option, 'A' %>
+<%= f.label :a %>
+<%= f.radio_button :option, 'B' %>
+<%= f.label :b %>
+<%= f.radio_button :option, 'C' %>
+<%= f.label :c %>
+<%= f.radio_button :option, 'D' %>
+<%= f.label :d %>
+</p>
+<p class = "actions">
+<%= f.submit 'Go!' %> 
+</p>
+<% end %>
 <% end %>
 <% end %>
 <p> Go back to
