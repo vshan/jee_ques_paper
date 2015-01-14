@@ -1,13 +1,12 @@
-<%= javascript_include_tag :defaults %>
+
 <div id="SingleQuestion">
 <h1>Single Question</h1>
 <%= form_for :question do |form| %> 
 
 <%= form.label :subject %>
-<%= form.select :subject, @scode,:value => @scode  %>
-
+<%= form.select :subject, @scode %>
 <%= form.label :topic %>
-<%= form.select :topic, @tcode,:value => @tcode %>
+<%= form.select :topic, @tcode %>
  <p class="actions">
     <%= form.submit 'Generate Single Question'%>
  </p>
@@ -18,7 +17,7 @@
 <%= form_for :question do |form| %> 
 <p>
 	<%= form.label :year %>
-	<%= form.select :year,  (1960..2015) %>
+	<%= form.select :year,  (1960..2014) %>
 </p>
 <p class="actions">
     <%= form.submit 'Generate Question Paper'%>

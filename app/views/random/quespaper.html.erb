@@ -2,7 +2,7 @@
 <% @scodes.each do |s| %>
 <h2> <%= s.sname %> </h2>
 <% @sub[s.scode].each do |question| %> 
-<p><%= question.question %></p>
+<p><%= question.question.html_safe %></p>
 <% end %>
 <% end %>
 <p> Go back to
