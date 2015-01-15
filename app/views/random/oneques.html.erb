@@ -1,16 +1,16 @@
 <h1>Single random question</h1>
-<p> <%= @rand.question.html_safe %>  </p>
+<p> <%= @rand.question %>  </p>
 <%= form_for(:question) do |f| %>
 <p> 
 <%= f.label "Option: " %>
 <%= f.radio_button @rand.id, "A" %>
-<%= f.label "#{@rand.opa.html_safe}" %>
+<%= f.label "#{@rand.opa}" %>
 <%= f.radio_button @rand.id, "B" %>
-<%= f.label "#{@rand.opb.html_safe}" %>
+<%= f.label "#{@rand.opb}" %>
 <%= f.radio_button @rand.id, "C" %>
-<%= f.label "#{@rand.opc.html_safe}" %>
+<%= f.label "#{@rand.opc}" %>
 <%= f.radio_button @rand.id, "D" %>
-<%= f.label "#{@rand.opd.html_safe}" %>
+<%= f.label "#{@rand.opd}" %>
 </p>
 <p class = "actions">
 <%= f.submit "Go!" %> 
@@ -18,4 +18,4 @@
 <% end %>
 <p> Go back to
   <%= link_to "home", random_index_path %>
-</p>
+</p
