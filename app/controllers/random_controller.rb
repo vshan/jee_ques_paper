@@ -123,11 +123,10 @@ class RandomController < ApplicationController
        subq << question 
       elsif (aqcode == question_code) && (atcode == topic_code) && (subtopic_code == 0)
         subq << question
-      else
-        subq << Question.new(question: "No question found with specified conditions", opa: 1, opb: 1, opc: 1, opd: 1, ro: 'A', year: Date.parse("12-12-2014"), examcode: 1, subjectcode: 0, topiccode: 0, stopiccode: 0)
       end
     end
-    subq.each do |s| puts(subq) 
+    if subq.empty?
+      subq << Question.new(question: "No question found with specified conditions", opa: 1, opb: 1, opc: 1, opd: 1, ro: 'A', year: Date.parse("12-12-2014"), examcode: 1, subjectcode: 0, topiccode: 0, stopiccode: 0)
     end
     subq[SecureRandom.random_number(subq.size)]
   end
