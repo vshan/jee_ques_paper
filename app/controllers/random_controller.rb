@@ -60,10 +60,13 @@ class RandomController < ApplicationController
 
   def oqvalidate(params)
     index
-    if eval(params[:ques])[:value] == params[:question][:option]
-      @op = true
-    else
-      @op = false
+    answer = params[:question]
+    answer.each do |id, choice|
+      if Question.find(id.to_i).ro == choice
+        @op = true
+      else
+        @op = false
+      end
     end
   end
 
