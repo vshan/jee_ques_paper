@@ -67,6 +67,20 @@ class RandomController < ApplicationController
     end
   end
 
+#{"utf8"=>"✓", "authenticity_token"=>"jRTS5UbMpYRjNHlSbj6i5wfOVtoP6YhoKFN9kw5Nm1k=", "question"=>{"66"=>"B", "65"=>"C", "74"=>"D", "70"=>"B", "75"=>"D", "76"=>"B"}, "commit"=>"Submit Paper", "action"=>"create", "controller"=>"random"}
+
+
+  def qpvalidate(params)
+    index
+    @score = 0
+    answers = params[:question]
+    answers.each do |id, choice| 
+      if Question.find(id.to_i).ro == choice
+        @score += 1
+      end
+    end
+  end
+
   def quespaper
     #@phyq = generate_question(1)
     #@chemq = generate_question(2)
@@ -96,6 +110,11 @@ class RandomController < ApplicationController
         format.html do 
           oqvalidate(params)
           render action: 'oqvalidate'
+        end
+      elsif params[:commit] == "Submit Paper"
+        format.html  do
+          qpvalidate(params)
+          render action: 'qpvalidate'
         end
       end
     end
