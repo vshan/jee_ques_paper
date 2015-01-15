@@ -10,13 +10,13 @@
 <p> 
 <%= f.label "Option: " %>
 <%= f.radio_button question.id, "A" %>
-<%= f.label "#{question.opa}" %>
+<%= f.label "#{question.opa.html_safe}" %>
 <%= f.radio_button question.id, "B" %>
-<%= f.label "#{question.opb}" %>
+<%= f.label "#{question.opb.html_safe}" %>
 <%= f.radio_button question.id, "C" %>
-<%= f.label "#{question.opc}" %>
+<%= f.label "#{question.opc.html_safe}" %>
 <%= f.radio_button question.id, "D" %>
-<%= f.label "#{question.opd}" %>
+<%= f.label "#{question.opd.html_safe}" %>
 </p>
 
 <% end %>

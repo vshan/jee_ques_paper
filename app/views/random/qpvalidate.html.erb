@@ -1,3 +1,11 @@
-<p> Your score is 
+<h1> Statistics </h1>
+<h2> Your score is 
 <%= @score %>
-</p> 
+</h2> 
+<% Scode.all.each do |subject| %>
+<% unless subject.scode.to_i == 0 %>
+<h2> Your score in <%= subject.sname %>
+: <%= @subm[subject.scode] %>
+</h2>
+<% end  %>
+<% end %>

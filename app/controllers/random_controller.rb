@@ -2,7 +2,7 @@ require 'securerandom'
 
 class RandomController < ApplicationController
   def enable
-    @no_of_questions = 2
+    @no_of_questions = 5
     @questions = Question.all
   end
 
@@ -76,12 +76,26 @@ class RandomController < ApplicationController
   def qpvalidate(params)
     index
     @score = 0
+    @right_ans = 0
+    @wrong_ans = 0
+    @subm = []
+    @subr = []
+    Scode.all.each do |sub|
+      @subm[sub.scode] = 0
+      @subr[sub.scode] =0
+    end
     answers = params[:question]
     answers.each do |id, choice| 
-      if Question.find(id.to_i).ro == choice
-        @score += 1
+      quer_ques = Question.find(id.to_i)
+      if quer_ques.ro == choice
+        @right_ans += 1
+        @subm[quer_ques.subjectcode] += 1
+      else
+        @wrong_ans += 1
+        @subr[quer_ques.subjectcode] += 1
       end
     end
+    @score = @right_ans
   end
 
   def quespaper
