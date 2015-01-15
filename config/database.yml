@@ -11,10 +11,10 @@
 development:
   adapter: mysql
   encoding: utf8
-  database: jeeque_dev
+  database: que_dev
   pool: 5
-  username: akshay
-  password: rorexam
+  username: root
+  password: vinay12
   socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -23,17 +23,17 @@ development:
 test:
   adapter: mysql
   encoding: utf8
-  database: jeeque_test
+  database: que_test
   pool: 5
-  username: akshay
-  password: rorexam
+  username: root
+  password: vinay12
   socket: /var/run/mysqld/mysqld.sock
 
 production:
   adapter: mysql
   encoding: utf8
-  database: jeeque_production
+  database: que_production
   pool: 5
   username: root
-  password: akshaysmita1*
+  password: vinay12
   socket: /var/run/mysqld/mysqld.sock

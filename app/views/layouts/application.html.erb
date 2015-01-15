@@ -6,9 +6,27 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
+</head>
 <body>
-
-<%= yield %>
-
+  <div id = "container">
+  <div id = "header">
+    <h1 id = "actual_title"><a href="/">JEE Random Question Generator</a></h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/">Home</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div id = "main">
+    <%= yield %>
+  </div>
+  <footer>
+    <p>Copyright 2015, Akshay Revankar, Huzaifa Abbasi, Chandramouli Amarnath and Vinay Bhat.</p>
+  </footer>
+  </div>
 </body>
 </html>
+
