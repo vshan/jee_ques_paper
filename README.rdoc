@@ -27,9 +27,10 @@ DONE:
 * Added (non-scaffolded) random views
 * Added basic validation
 * Added answer selection (radio boxes) + answer validation
+* Add AJAX Dynamic selection (cascading drop down)
 
 TODO: 
-* Add AJAX Dynamic selection (cascading drop down)
+
 * Add CSS
 * Add admin privileges
 
