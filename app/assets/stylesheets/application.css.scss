@@ -63,21 +63,21 @@ blockquote, q {
 /* Main Show starts now, baby */
 
 /*
-@dark-one: #20403E;
+@dark-one: #3D403F;
 @dark-two: #417F7C;
 @light-one: #61BFBA;
 @light-two: #74E5DF;
-@light-three: #81FFF7; 
+@light-three: #F2F2E9; 
 */
 
 body {
   font: 20px Helvetica, Sans-Serif; 
   line-height: 24px;
-  background-color: #20403E; 
+  background-color: #3D403F; 
 }
 
 #main {
-  background-color: #81FFF7;
+  background-color: #F2F2E9;
 }
 
 
@@ -119,7 +119,7 @@ body {
 }
   
 #header, footer {
-  background-color: #20403E;
+  background-color: #3D403F;
 }
 
 footer {
@@ -148,7 +148,7 @@ footer p {
 
     a {
       text-decoration: none;
-      color: #81FFF7;
+      color: #F2F2E9;
       text-shadow: 0px 4px 4px #000000, 0px 5px 4px #ffffff;
     }
 
@@ -248,9 +248,9 @@ $bg: #1a1a1a;
    letter-spacing: .15em;
    text-transform: uppercase;
   
-   border: 3px solid #20403E; //rgba(46, 159, 255, 0.1);
-   background: #20403E;
-   color: darken(#81FFF7, 2%);
+   border: 3px solid #3D403F; //rgba(46, 159, 255, 0.1);
+   background: #3D403F;
+   color: darken(#F2F2E9, 2%);
    
     &.style1 {
      position: relative;
@@ -263,7 +263,7 @@ $bg: #1a1a1a;
        height: 0;
        width: 0;
        border-radius: 50%;
-       background: #81FFF7;
+       background: #F2F2E9;
        z-index: -1;
        @include transform(translate(-50%, -50%));
        @include transition(width .3s, height .2s ease-in-out, border-radius .1s linear .05s);
@@ -277,7 +277,7 @@ $bg: #1a1a1a;
   
    &:hover,
    &:active {
-      color: #20403E;
+      color: #3D403F;
 
   }
 }
