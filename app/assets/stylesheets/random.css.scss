@@ -1,3 +1,89 @@
 // Place all the styles related to the random controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#questionforms #singlequestion {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+#questionforms h1 {
+  font: 300 42px/72px 'Oswald', sans-serif;
+  text-align: center;
+  color: #20403E;
+}
+
+#questionforms select, option {
+  font: 300 17px/62px 'Oswald', sans-serif;
+}
+
+
+#questionforms label {
+  font: 400 24px/62px 'Oswald', sans-serif;
+  color: #20403E;
+  padding: 10px;
+}
+
+#questionforms option {
+  background-color: #20403E;
+  color: #81FFF7;
+}
+
+#questionforms form {
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+#questionforms .actions {
+  display: block;
+  margin: 0 auto;
+  padding: 20px 140px 0px 140px;
+
+  input {
+   background-color: rgba(0,0,0,0);
+   border: none;
+   color: #81FFF7;
+  }
+}
+
+input {
+  border: none;
+}
+/*
+
+*/
+
+.actions input {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  text-shadow: 0px 1px 3px #666666;
+  -webkit-box-shadow: 0px 0px 9px #666666;
+  -moz-box-shadow: 0px 0px 9px #666666;
+  box-shadow: 0px 0px 9px #666666;
+  font-family: 'Georgia';
+  color: #ffffff;
+  font-size: 25px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.actions input:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+#questionpaper select, option {
+
+}
