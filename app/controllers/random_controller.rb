@@ -70,9 +70,6 @@ class RandomController < ApplicationController
     end
   end
 
-#{"utf8"=>"✓", "authenticity_token"=>"jRTS5UbMpYRjNHlSbj6i5wfOVtoP6YhoKFN9kw5Nm1k=", "question"=>{"66"=>"B", "65"=>"C", "74"=>"D", "70"=>"B", "75"=>"D", "76"=>"B"}, "commit"=>"Submit Paper", "action"=>"create", "controller"=>"random"}
-
-
   def qpvalidate(params)
     index
     @score = 0

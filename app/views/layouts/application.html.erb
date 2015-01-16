@@ -5,28 +5,33 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 </head>
 </head>
 <body>
-  <div id = "container">
   <div id = "header">
+   <div id = "headcont">
     <h1 id = "actual_title"><a href="/">JEE Random Question Generator</a></h1>
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/">Home</a></li>
-        <li><a href="/">Home</a></li>
-        <li><a href="/">Home</a></li>
+        <li><a href="/">About</a></li>
+        <li><a href="/">Contact</a></li>
       </ul>
     </nav>
   </div>
+  </div>
   <div id = "main">
+  <div id = "container">
     <%= yield %>
   </div>
-  <footer>
-    <p>Copyright 2015, Akshay Revankar, Huzaifa Abbasi, Chandramouli Amarnath and Vinay Bhat.</p>
-  </footer>
   </div>
+  <footer>
+  <div id = "footcont">
+    <p>Copyright &copy; 2015 </p>
+    <p>Made by <a href="https://www.facebook.com/revankar.akshay">Akshay</a>, <a href="https://www.facebook.com/profile.php?id=1763535774">Chandramouli</a>, <a href="https://www.facebook.com/huz.abbasi">Huzaifa</a>, and <a href="https://www.facebook.com/vinaybhat001">Vinay</a>.</p>
+  </div>
+  </footer>
 </body>
 </html>
 

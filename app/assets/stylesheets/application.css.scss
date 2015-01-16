@@ -59,7 +59,81 @@ blockquote, q {
   quotes: "" "";
 }
 
-#container {
+/* Main Show starts now, baby */
+
+/*
+@dark-one: #20403E;
+@dark-two: #417F7C;
+@light-one: #61BFBA;
+@light-two: #74E5DF;
+@light-three: #81FFF7; 
+*/
+
+body {
+  font: 20px Helvetica, Sans-Serif; 
+  line-height: 24px;
+  background-color: #20403E; 
+}
+
+#main {
+  background-color: #81FFF7;
+}
+
+
+#container, #headcont, #footcont {
   width: 960px;
   margin: 0 auto 24px auto;  
+
+  nav ul li {
+    display: inline;
+    a {
+      text-decoration: none;
+    }
+  }
+
+  nav ul li {
+    float: left; list-style: none;
+    width: 320px; 
+    text-align: center;
+    background-color: #417F7C;
+    padding-top: 10px; padding-bottom: 10px;
+    a { 
+      text-decoration: none;
+      color: #74E5DF;
+    }
+  }
 }
+
+#container {
+  min-height: 600px;
+}
+  
+#header, footer {
+  background-color: #20403E;
+}
+
+footer p {
+  color: #61BFBA;
+  text-align: center;
+  font-size: 0.6em;
+  line-height: 1.4;
+  a {
+    text-decoration: none;
+    color: #74E5DF;
+  }
+}
+
+#actual_title {
+    text-align:center;
+    width: auto;
+    font-family: 'Lobster', cursive;
+    font-size: 3em;
+    padding: 60px;
+
+    a {
+      text-decoration: none;
+      color: #81FFF7;
+    }
+
+  }
+
